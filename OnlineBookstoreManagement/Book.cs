@@ -253,4 +253,22 @@ public class Book
 
         Console.WriteLine("There is no book with this title");
     }
+
+    //This method returns list of all books contained in Books.txt file that are below 10 quantity
+    public static List<Book> GetBooksBelow10Quantity()
+    {
+        List<Book> books = new List<Book>();
+        string[] booksString = File.ReadAllLines("Books.txt");
+        foreach (var bookString in booksString)
+        {
+            string[] bookDetail = bookString.Split(",");
+            Book book = new Book(bookDetail[0], bookDetail[1], bookDetail[2], double.Parse(bookDetail[3]), int.Parse(bookDetail[4]));
+            if (book.Quantity < 10)
+            {
+                books.Add(book);
+            }
+        }
+
+        return books;
+    }
 }

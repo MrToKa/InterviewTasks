@@ -81,5 +81,29 @@
             File.AppendAllText("OrderDetails.txt", $"{orderDetail.OrderId},{orderDetail.Title},{orderDetail.Author},{orderDetail.Genre},{orderDetail.Price},{orderDetail.Quantity}\n");
         }       
 
+        //This code returns top 5 best selling books
+        public static void ShowBestSellingBooks()
+        {
+            List<OrderDetails> orderDetails = GetAllOrderDetails();
+            List<Book> books = Book.GetAllBooks();
+            Dictionary<string, int> bookQuantity = new Dictionary<string, int>();
+            foreach (var book in books)
+            {
+                bookQuantity.Add(book.Title, 0);
+            }
+
+            foreach (var orderDetail in orderDetails)
+            {
+                bookQuantity[orderDetail.Title] += orderDetail.Quantity;
+            }
+
+            Dictionary<string, int> sortedBookQuantity = bookQuantity.OrderByDescending(x => x.Value).Take(5).ToDictionary(x => x.Key, x => x.Value);
+
+            Console.WriteLine("Top 5 best selling books:");
+            foreach (var book in sortedBookQuantity)
+            {
+                Console.WriteLine($"Title: {book.Key} - Quantity: {book.Value}");
+            }             
+        }
     }
 }

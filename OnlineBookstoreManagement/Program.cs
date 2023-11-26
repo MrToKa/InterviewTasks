@@ -113,6 +113,24 @@
                         Order.FilterOrders();
                         break;
                     case 15:
+                        if (Book.GetBooksBelow10Quantity().Count == 0)
+                        {
+                            Console.WriteLine("There are no books running low in the system");
+                        }
+                        else
+                        {
+                            List<Book> books = Book.GetBooksBelow10Quantity();
+                            foreach (var book in books)
+                            {
+                                Console.WriteLine($"Title: {book.Title} - Quantity: {book.Quantity}");
+                            }
+                        }
+                        break;
+                    case 16:
+                        OrderDetails.ShowBestSellingBooks();
+                        break;
+
+                    case 17:
                         Console.WriteLine("You have successfully logged out!");
                         isLogin = false;
                         break;

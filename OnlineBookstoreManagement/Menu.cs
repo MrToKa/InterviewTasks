@@ -27,7 +27,9 @@ public class Menu
         Console.WriteLine("12. Place Order for Customer");
         Console.WriteLine("13. View Orders");
         Console.WriteLine("14. Filter orders by Customer or Date");
-        Console.WriteLine("15. Logout");
+        Console.WriteLine("15. Show Books that are running low report");
+        Console.WriteLine("16. Show Top 5 best selling books");
+        Console.WriteLine("17. Logout");
     }
     
     public static void ShowCartMenu()
