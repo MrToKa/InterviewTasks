@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagementSystem", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "To-DoListApp", "To-DoListApp\To-DoListApp.csproj", "{F1FAD06B-F4A0-4534-ABA4-0262D8BC2988}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineBookstoreManagement", "OnlineBookstoreManagement\OnlineBookstoreManagement.csproj", "{CC4EFD6C-B9D6-44E1-80B7-CFF5AA578924}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineBookstoreManagement", "OnlineBookstoreManagement\OnlineBookstoreManagement.csproj", "{CC4EFD6C-B9D6-44E1-80B7-CFF5AA578924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvilengradCasino", "SvilengradCasino\SvilengradCasino.csproj", "{3B00169C-0B03-426F-8D61-16671A396B38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{CC4EFD6C-B9D6-44E1-80B7-CFF5AA578924}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC4EFD6C-B9D6-44E1-80B7-CFF5AA578924}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC4EFD6C-B9D6-44E1-80B7-CFF5AA578924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B00169C-0B03-426F-8D61-16671A396B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B00169C-0B03-426F-8D61-16671A396B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B00169C-0B03-426F-8D61-16671A396B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B00169C-0B03-426F-8D61-16671A396B38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
