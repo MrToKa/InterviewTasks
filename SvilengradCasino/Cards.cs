@@ -191,16 +191,36 @@ namespace SvilengradCasino
 
         }
 
-        public static void PrintTable(List<string> hand, List<string> dealerHand)
+        public static void PrintTable(List<string> hand)
         {
-            Console.WriteLine("Your hand:");
             CardsASCII.PrintHandGraphic(hand);
             Console.WriteLine($"Hand value: {GetHandValue(hand)}");
             Console.WriteLine("----------------------------");
-            Console.WriteLine("Dealer's hand:");
-            CardsASCII.PrintHandGraphic(dealerHand);
-            Console.WriteLine($"Hand value: {GetHandValue(dealerHand)}");
-            Console.WriteLine("----------------------------");
+        }
+
+        public static string GetCardSuit(string card)
+        {
+            string suit = "";
+
+            if (card.Contains("Spades"))
+            {
+                suit = "Spades";
+            }
+            else if (card.Contains("Hearts"))
+            {
+                suit = "Hearts";
+            }
+            else if (card.Contains("Diamonds"))
+            {
+                suit = "Diamonds";
+            }
+            else if (card.Contains("Clubs"))
+            {
+                suit = "Clubs";
+            }
+
+            return suit;
+
         }
     }
 }

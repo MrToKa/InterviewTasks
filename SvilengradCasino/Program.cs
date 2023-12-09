@@ -92,9 +92,8 @@ namespace SvilengradCasino
 
             while (true)
             {
-                BlackJackGame.Play(new Player("test", "test", 1000));
+                PokerGame.Play(new Player("test", "test", 1000));
             }
-
 
 
 

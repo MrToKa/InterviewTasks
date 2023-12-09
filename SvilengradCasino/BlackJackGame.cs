@@ -36,7 +36,10 @@ namespace SvilengradCasino
                     deck = Cards.ShuffleDeck(deck);
                     List<string> dealerHand = Cards.DealCards(deck, 2);
 
-                    Cards.PrintTable(hand, dealerHand);
+                    Console.WriteLine("Your hand:");
+                    Cards.PrintTable(hand);
+                    Console.WriteLine("Dealer hand hand:");
+                    Cards.PrintTable(dealerHand);
 
                     if (!GameDeciderInstantLogic(hand, dealerHand, player, currentBet))
                     {
@@ -55,8 +58,6 @@ namespace SvilengradCasino
                 default:
                     Console.WriteLine("Wrong choice!");
                     break;
-
-
             }
         }
 
@@ -64,6 +65,7 @@ namespace SvilengradCasino
         {
             int handValue = Cards.GetHandValue(hand);
             int dealerHandValue = Cards.GetHandValue(dealerHand);
+
 
             if (handValue > 21)
             {
@@ -154,12 +156,18 @@ namespace SvilengradCasino
                 {
                     case 1:
                         Hit(deck, hand, dealerHand);
-                        Cards.PrintTable(hand, dealerHand);
+                        Console.WriteLine("Your hand");
+                        Cards.PrintTable(hand);
+                        Console.WriteLine("Dealer hand");
+                        Cards.PrintTable(dealerHand);
                         isPlaying = GameDeciderInstantLogic(hand, dealerHand, player, currentBet);
                         break;
                     case 2:
                         Hold(deck, dealerHand);
-                        Cards.PrintTable(hand, dealerHand);
+                        Console.WriteLine("Your hand");
+                        Cards.PrintTable(hand);
+                        Console.WriteLine("Dealer hand");
+                        Cards.PrintTable(dealerHand);
                         if (!GameDeciderInstantLogic(hand, dealerHand, player, currentBet))
                         {
                             return;
@@ -231,7 +239,5 @@ namespace SvilengradCasino
                 dealerHand.AddRange(card);
             }
         }
-
-
     }
 }
